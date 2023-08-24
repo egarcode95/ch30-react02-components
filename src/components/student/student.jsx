@@ -1,6 +1,6 @@
 import React from "react";
 
-//const studentName = "Tania";
+const studentName = "Tania";
 
 /*
  Los datos pasados como props, los recibimos como 
@@ -21,7 +21,7 @@ const Student = ( { info, children } ) => {
         <h4> { info.name } </h4>
       </a>
       <p> Ex-alumno:{ info.isGraduate ? " Sí " : " No "}   </p>
-      <p>{children}</p>
+      <p>{ children }</p>
     </>
   );
 };

@@ -1,17 +1,21 @@
 
 import './App.css';
 import CounterPage from './components/counter/counter-page';
+import Generation from './components/greeting/generation';
 import Greeting from './components/greeting/greeting';
-import Generation from './components/generation/generation';
-import { Navbar, Footer } from './components/navbar/navbar';
+import { Footer, Navbar } from './components/navbar/navbar';
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navbar />
-      <CounterPage />
-      {/* <Greeting />
-      <Generation />
-      <Footer /> */}
+      <Routes>
+         <Route path='/' element={ <Greeting />} />
+         <Route path='/generation' element={<Generation /> } />
+         <Route path='/counter' element={<CounterPage /> } />
+      </Routes>
+      <Footer /> 
     </div>
   );
 }

@@ -1,21 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-// importamos una función que esta exportada como default
-import Greeting from './components/greeting/greeting';
-import Generation from './components/generation/generation';
-import Navbar from './components/navbar/navbar';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
+import { BrowserRouter } from "react-router-dom";
 /*
 React.StrictMode: Componente de React que se utiliza en el desarrollo
 para detectar y advertir sobre posibles problemas en una aplicación.
 
 */
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <CssBaseline />
+    <Container maxWidth="lg">
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Container>
   </React.StrictMode>
 );
